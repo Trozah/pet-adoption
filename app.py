@@ -27,10 +27,11 @@ def animals(pet_type):
 		html += "</ul>"
 		return html
 
+
 @app.route('/animals/<pet_type>/<int:pet_id>')
 def pet(pet_type, pet_id):
-  pet = pets[pet_type][pet_id]
-  return f"""
+	pet = pets[pet_type][pet_id]
+	return f"""
     <h1>{pet['name']}</h1>
     <img src={pet['url']} alt='alt text'>
     <p>{pet['description']}</p>
